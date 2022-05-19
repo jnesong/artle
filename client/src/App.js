@@ -15,12 +15,16 @@ function App() {
 
   }, []);
 
-  if (chicago) {console.log(chicago)}
-  if (chicago) {console.log(chicago.config.iiif_url)}
-  if (chicago) {console.log(chicago.data.image_id)}
-  if (chicago) {console.log(chicago.config.iiif_url + "/" + chicago.data.image_id + "/full/843,/0/default.jpg" )}
+  // if (chicago) {console.log(chicago)}
+  // if (chicago) {console.log(chicago.config.iiif_url)}
+  // if (chicago) {console.log(chicago.data.image_id)}
+  // if (chicago) {console.log(chicago.config.iiif_url + "/" + chicago.data.image_id + "/full/843,/0/default.jpg" )}
 
-  if (chicago) {setImageURL(chicago.config.iiif_url + "/" + chicago.data.image_id + "/full/843,/0/default.jpg" )}
+  useEffect(() => {
+    if (chicago) {setImageURL(chicago.config.iiif_url + "/" + chicago.data.image_id + "/full/843,/0/default.jpg")}
+  }, [chicago])
+
+
 
   return (
     <div>
