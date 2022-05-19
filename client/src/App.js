@@ -1,13 +1,16 @@
 //components
-import Aioc from "./Aioc";
+import Aioc from './Aioc';
+import ArtPiece from './ArtPiece';
+//styling
+import './artle.css'
 
 function App() {
 
 
   return (
-    <>
-    <Aioc />
-    </>
+    <div className="center">
+    <ArtPiece />
+    </div>
   );
 }
 
