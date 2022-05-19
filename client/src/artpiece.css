@@ -1,0 +1,24 @@
+.art-div {
+    padding:100px;
+    width:800px;
+    height:auto;
+    margin:auto;
+    display: inline-block;
+}
+
+.boxes {
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: 200px;
+    margin-top: 0px;  
+}
+
+.art-piece {
+    object-fit: contain;
+    width: 800px;
+    height: auto;
+}
+
