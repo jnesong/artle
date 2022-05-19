@@ -6,23 +6,13 @@ import a0 from './gallery/a0.jpg';
 
 const ArtPiece = () => {
 
-    const pieceStyle = {
-
-        width: '500px',
-        height: '300px',
-        backgroundImage: `url(${a0})`,
-
-    }
 
 
     return (
-        <>
-        <div
-        style={pieceStyle}
-        
-        />
-
-        </>
+        <div className="art-div">
+        <div className="boxes"></div>
+        <img className="art-piece" src={a0} alt="artwork" />
+        </div>
     );
 
 }

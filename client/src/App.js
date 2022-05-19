@@ -8,7 +8,7 @@ function App() {
 
 
   return (
-    <div className="center">
+    <div className="center-piece">
     <ArtPiece />
     </div>
   );
