@@ -14,7 +14,7 @@ function App() {
 
   }, []);
 
-  console.log(chicago)
+  console.log(chicago.config.iiif_url)
 
 
   return (
