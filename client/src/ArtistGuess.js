@@ -1,7 +1,7 @@
 //libraries
 import { useState, useEffect } from 'react';
 
-const ArtistGuess = ( {tries, makeArtistGuessArray} ) => {
+const ArtistGuess = ( {tries, makeArtistGuessArray, artistCorrect} ) => {
 
     const [userArtistGuess, setUserArtistGuess] = useState("");
 
@@ -19,6 +19,7 @@ const ArtistGuess = ( {tries, makeArtistGuessArray} ) => {
 
     }, [tries]);
 
+    console.log(artistCorrect)
 
     return (
         <>
@@ -29,6 +30,7 @@ const ArtistGuess = ( {tries, makeArtistGuessArray} ) => {
                     name="userArtistGuess"
                     value={userArtistGuess}
                     onChange={handleChange}
+                    disabled= {artistCorrect}
                 />
                 
             </form>

@@ -22,6 +22,7 @@ function App() {
 
   const [tries, setTries] = useState(0);
   const [artistGuesses, setArtistGuesses] = useState([]);
+  const [artistCorrect, setArtistCorrect] = useState(false);
 
 
   //refactor this too
@@ -32,7 +33,7 @@ function App() {
   };
 
   const makeArtistGuessArray = (newGuess) => {
-    if (newGuess === artBankMatch.artist) {console.log("correct!!!")}
+    if (newGuess === artBankMatch.artist) {setArtistCorrect(true)}
     if (artistGuesses[0]==="") {setArtistGuesses([newGuess])}
     else {setArtistGuesses([...artistGuesses, newGuess])}
   }
@@ -45,6 +46,7 @@ function App() {
       <UserForm
         tries={tries}
         makeArtistGuessArray={makeArtistGuessArray}
+        artistCorrect={artistCorrect}
       />
       <button id="click" onClick={addTries}> submit </button>
       <UserPreviousGuess
