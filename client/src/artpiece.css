@@ -6,6 +6,15 @@
     display: inline-block;
 }
 
+.try-one {
+    display: grid;
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    width:800px;
+
+}
+
 .box0,
 .box1,
 .box2,
