@@ -9,9 +9,14 @@
 .try-one {
     display: grid;
     background-color: black;
+    opacity: 60%;
     z-index: 10;
     position: absolute;
     width:800px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+
 
 }
 
