@@ -18,7 +18,6 @@ const ArtPiece = ({tries}) => {
     const [opacityTwoPercent, setOpacityTwoPercent] = useState("100%");
     const [opacityThreePercent, setOpacityThreePercent] = useState("100%");
     const [opacityFourPercent, setOpacityFourPercent] = useState("100%");
-    // const [tries, setTries] = useState(0);
 
     //5 lines - get the current images height in px on image load and sets it to the pieceHeight state
     const onPieceLoad = ({ target: img }) => {
@@ -57,7 +56,6 @@ const ArtPiece = ({tries}) => {
    const tryFour = {
         opacity: opacityFourPercent
     };
-
 
 
     useEffect ( () => {

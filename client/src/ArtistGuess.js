@@ -1,7 +1,7 @@
 //libraries
 import { useState, useEffect } from 'react';
 
-const ArtistGuess = () => {
+const ArtistGuess = ( {tries, makeArtistGuessArray} ) => {
 
     const [userArtistGuess, setUserArtistGuess] = useState("");
 
@@ -9,7 +9,15 @@ const ArtistGuess = () => {
         setUserArtistGuess(e.target.value);
     };
 
-    console.log(userArtistGuess)
+
+    // console.log(userArtistGuess);
+    // with every try submission, send the App component the new user guess 
+    //through the makeArtistGuessArray function, which was passed down via props
+    useEffect ( () => {
+
+        makeArtistGuessArray(userArtistGuess)
+
+    }, [tries]);
 
 
     return (
