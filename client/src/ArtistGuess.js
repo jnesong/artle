@@ -1,7 +1,7 @@
 //libraries
 import { useState, useEffect } from 'react';
 
-const ArtistGuess = ( {tries, makeArtistGuessArray, artistCorrect} ) => {
+const ArtistGuess = ( {tries, makeArtistGuessArray, artistCorrect, guessResponse} ) => {
 
     const [userArtistGuess, setUserArtistGuess] = useState("");
 
@@ -34,6 +34,7 @@ const ArtistGuess = ( {tries, makeArtistGuessArray, artistCorrect} ) => {
                 />
                 
             </form>
+            <p> {guessResponse} </p>
         </>
     )
 };

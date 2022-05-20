@@ -28,7 +28,7 @@ input[type=text]:focus {
 input[type=text] {
   display: inline-block;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   width: 340px;
   padding: 8 px;
   background-color: transparent;
@@ -56,6 +56,7 @@ input[type=text] {
 
 #prev-guess-columns {
   width: 798px;
+  height: 400px;
   column-count: 2;
   display: inline-block;
   margin: auto;
@@ -63,15 +64,20 @@ input[type=text] {
   font-size: 18px;
   text-align: left;
   letter-spacing: 2px;
+  margin-bottom: 100px;
 }
 
 .previous-guess-list-a {
   margin-left: 10px;
+  height: 400px;
+
 }
 
 .previous-guess-list-b {
-  padding-top: 18px;
+  margin-top: -20px;
   margin-left: 24px;
+  height: 400px;
+
 }
 
 .prev-guess-item {

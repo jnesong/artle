@@ -2,7 +2,7 @@
 import ArtistGuess from './ArtistGuess';
 import TitleGuess from './TitleGuess';
 
-const UserForm = ( {tries, makeArtistGuessArray, artistCorrect} ) => {
+const UserForm = ( {tries, makeArtistGuessArray, artistCorrect, guessResponse} ) => {
 
     return (
         <div id="guess-columns">
@@ -10,6 +10,7 @@ const UserForm = ( {tries, makeArtistGuessArray, artistCorrect} ) => {
             tries={tries}
             makeArtistGuessArray={makeArtistGuessArray}
             artistCorrect={artistCorrect}
+            guessResponse={guessResponse}
             />
             <TitleGuess />
         </div>
