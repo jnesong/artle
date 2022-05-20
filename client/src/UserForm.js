@@ -5,7 +5,7 @@ import TitleGuess from './TitleGuess';
 const UserForm = () => {
 
     return (
-        <div>
+        <div id="guess-columns">
             <ArtistGuess />
             <TitleGuess />
         </div>

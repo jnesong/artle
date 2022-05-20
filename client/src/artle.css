@@ -33,3 +33,8 @@ input[type=text] {
   font-family: "Optima", sans-serif;
   text-align: center
 }
+
+#guess-columns {
+  column-count: 2;
+  column-gap: 20px;
+}
