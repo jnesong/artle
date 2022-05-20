@@ -73,3 +73,7 @@ input[type=text] {
   padding-top: 18px;
   margin-left: 24px;
 }
+
+.prev-guess-item {
+  line-height: 32px;
+}

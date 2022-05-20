@@ -1,17 +1,10 @@
 //libraries
 import { useState, useEffect } from 'react';
-//gallery
-import a0 from './gallery/a0.jpg';
-import a1 from './gallery/a1.jpg';
-import a2 from './gallery/a2.jpg';
-import a3 from './gallery/a3.jpg';
-import a4 from './gallery/a4.jpg';
-import a5 from './gallery/a5.jpg';
 //css
 import './artpiece.css';
 
 
-const ArtPiece = ({tries}) => {
+const ArtPiece = ({tries, currentArtPiece}) => {
 
     const [pieceHeight, setPieceHeight] = useState(0);
     const [opacityOnePercent, setOpacityOnePercent] = useState("100%");
@@ -91,7 +84,7 @@ const ArtPiece = ({tries}) => {
                 <div className="item-o" style={tryTwo}/>
                 <div className="item-p" style={tryOne}/>
             </div>
-            <img onLoad={onPieceLoad} className="art-piece" src={a2} alt="artwork" />
+            <img onLoad={onPieceLoad} className="art-piece" src={currentArtPiece} alt="artwork" />
         </div>
     );
 
