@@ -2,15 +2,21 @@
     text-align: center;
   }
 
+  #artle-title {
+    font-family: "Optima", sans-serif;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: 40px;
+  }
+
   #click {
     background-color:transparent;
     color: rgb(7, 36, 21);
-    padding: 5px;
-    font-size: 22px;
     border:none;
     padding: 40px;
-    letter-spacing: 2px;
+    font-size: 22px;
     font-family: "Optima", sans-serif;
+    letter-spacing: 2px;
   }
   
 input[type=text]:focus {

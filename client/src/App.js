@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="center-piece">
+      <p id="artle-title"> Artle </p>
       <ArtPiece tries={tries} />
       <UserForm />
       <button id="click" onClick={addTries}> submit </button>
