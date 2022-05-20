@@ -22,7 +22,8 @@ function App() {
   };
 
   const makeArtistGuessArray = (newGuess) => {
-    setArtistGuesses([...artistGuesses, newGuess])
+    if (artistGuesses[0]==="") {setArtistGuesses([newGuess])}
+    else {setArtistGuesses([...artistGuesses, newGuess])}
   }
 
 

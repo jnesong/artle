@@ -35,12 +35,15 @@ input[type=text] {
   font-family: "Optima", sans-serif;
   font-size: 18px;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 ::placeholder {
   color: rgb(113, 113, 113);
   font-family: "Optima", sans-serif;
-  text-align: center
+  text-align: center;
+  letter-spacing: 2px;
+
 }
 
 #guess-columns {
@@ -59,7 +62,7 @@ input[type=text] {
   font-family: "Optima", sans-serif;
   font-size: 18px;
   text-align: left;
-
+  letter-spacing: 2px;
 }
 
 .previous-guess-list-a {

@@ -3,15 +3,15 @@ import { useEffect } from 'react';
 
 const UserPreviousGuess = ( {artistGuesses} ) => {
 
-    let artistGuessList = <li> previous artist guess </li>
+    // let artistGuessList = <li> previous artist guess </li>
 
-    useEffect ( () => {
+    // useEffect ( () => {
 
-        artistGuessList = artistGuesses.map(artist => (
-            <li> artist </li>
-        ))
+    //     artistGuessList = artistGuesses.map(artist => <li> `${artist}` </li>)
 
-    }, [artistGuesses])
+    // }, [artistGuesses])
+
+    // console.log(artistGuessList)
 
 
     let previousTitles = 
@@ -22,7 +22,9 @@ const UserPreviousGuess = ( {artistGuesses} ) => {
     return (
         <div id="prev-guess-columns">
             <ol>
-            {artistGuessList}
+            {artistGuesses.map(artist => (
+                    <li key={artist.id}> {artist} </li>
+                ))}
             </ol>
             {previousTitles}
         </div>
