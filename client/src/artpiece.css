@@ -6,29 +6,31 @@
     display: inline-block;
 }
 
-.try-one {
+.art-piece {
+    object-fit: contain;
+    width: 800px;
+    height: auto;
+}
+
+/*
+the following is the grid of black out/reveal boxes
+*/
+
+.grid-container {
     display: grid;
     background-color: transparent;
     z-index: 5;
     position: absolute;
     width:800px;
     /*2 lines - breaks grid into 6x6 fractions*/
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.item-a {
-    grid-column: 1;
-    grid-row: 1;
+.grid-container > div {
     background-color: black;
     opacity: 100%;
     z-index: 10;
 }
 
-
-.art-piece {
-    object-fit: contain;
-    width: 800px;
-    height: auto;
-}
 
