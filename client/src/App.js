@@ -6,6 +6,7 @@ import ArtPiece from './ArtPiece';
 //styling
 import './artle.css'
 import UserForm from './UserForm';
+import UserPreviousGuess from './UserPreviousGuess';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <ArtPiece tries={tries} />
       <UserForm />
       <button id="click" onClick={addTries}> submit </button>
+      <UserPreviousGuess />
     </div>
   );
 }
