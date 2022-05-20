@@ -33,4 +33,18 @@ the following is the grid of black out/reveal boxes
     z-index: 10;
 }
 
+.item-g {
+    opacity:0%
+}
+
+#click {
+  background-color:transparent;
+  color: rgb(7, 36, 21);
+  padding: 5px;
+  font-size: 22px;
+  border:none;
+  padding: 40px;
+  letter-spacing: 2px;
+  font-family: "Optima", sans-serif;
+}
 

@@ -10,6 +10,11 @@ import './artpiece.css'
 const ArtPiece = () => {
 
     const [pieceHeight, setPieceHeight] = useState(0)
+    const [opacityOnePercent, setOpacityOnePercent] = useState("100%")
+    const [opacityTwoPercent, setOpacityTwoPercent] = useState("100%")
+    const [opacityThreePercent, setOpacityThreePercent] = useState("100%")
+    const [opacityFourPercent, setOpacityFourPercent] = useState("100%")
+    const [tries, setTries] = useState(0)
 
     //5 lines - get the current images height in px on image load and sets it to the pieceHeight state
     const onPieceLoad = ({ target: img }) => {
@@ -32,32 +37,61 @@ const ArtPiece = () => {
         }
     }, [pieceHeight])
 
-    const tryOne = {
-        opacity: "0%"
+    //refactor these tries later
+   const tryOne = {
+        opacity: opacityOnePercent
     }
+
+   const tryTwo = {
+        opacity: opacityTwoPercent
+    }
+
+   const tryThree = {
+        opacity: opacityThreePercent
+    }
+
+   const tryFour = {
+        opacity: opacityFourPercent
+    }
+
+    //refactor this too
+    const addTries = () => {
+        setTries(tries => tries+1)
+        console.log("clicked")
+    }
+
+    useEffect ( () => {
+
+        if (tries===1) setOpacityOnePercent("0%")
+        if (tries===2) setOpacityTwoPercent("0%")
+        if (tries===3) setOpacityThreePercent("0%")
+        if (tries===4) setOpacityFourPercent("0%")
+
+    }, [tries])
 
 
     return (
         <div className="art-div">
             <div className="grid-container" style={gridContainerStyle}>
-                <div className="item-a" />
-                <div className="item-b" />
-                <div className="item-c" />
-                <div className="item-d" />
-                <div className="item-e" />
-                <div className="item-f" />
-                <div className="item-g" style={tryOne}/>
-                <div className="item-h" />
-                <div className="item-i" />
-                <div className="item-j" />
-                <div className="item-k" />
-                <div className="item-l" />
-                <div className="item-m" />
-                <div className="item-n" />
-                <div className="item-o" />
-                <div className="item-p" />
+                <div className="item-a" style={tryTwo}/>
+                <div className="item-b" style={tryThree}/>
+                <div className="item-c" style={tryFour}/>
+                <div className="item-d" style={tryOne}/>
+                <div className="item-e" style={tryOne}/>
+                <div className="item-f" style={tryFour}/>
+                <div className="item-g" style={{opacity:"0%"}} />
+                <div className="item-h" style={tryFour}/>
+                <div className="item-i" style={tryThree}/>
+                <div className="item-j" style={tryFour}/>
+                <div className="item-k" style={tryThree}/>
+                <div className="item-l" style={tryTwo}/>
+                <div className="item-m" style={tryThree}/>
+                <div className="item-n" style={tryOne}/>
+                <div className="item-o" style={tryTwo}/>
+                <div className="item-p" style={tryOne}/>
             </div>
             <img onLoad={onPieceLoad} className="art-piece" src={a1} alt="artwork" />
+            <button id="click" onClick={addTries}> click here </button>
         </div>
     );
 
