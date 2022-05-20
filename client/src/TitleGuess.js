@@ -26,6 +26,6 @@ const TitleGuess = () => {
             </form>
         </>
     )
-}
+};
 
 export default TitleGuess;

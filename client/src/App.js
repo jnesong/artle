@@ -5,8 +5,7 @@ import Aioc from './Aioc';
 import ArtPiece from './ArtPiece';
 //styling
 import './artle.css'
-import ArtistGuess from './ArtistGuess';
-import TitleGuess from './TitleGuess';
+import UserForm from './UserForm';
 
 function App() {
 
@@ -22,8 +21,7 @@ function App() {
   return (
     <div className="center-piece">
       <ArtPiece tries={tries} />
-      <ArtistGuess />
-      <TitleGuess />
+      <UserForm />
       <button id="click" onClick={addTries}> submit </button>
     </div>
   );

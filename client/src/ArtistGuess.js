@@ -26,6 +26,6 @@ const ArtistGuess = () => {
             </form>
         </>
     )
-}
+};
 
 export default ArtistGuess;

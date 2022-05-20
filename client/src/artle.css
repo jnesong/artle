@@ -13,3 +13,23 @@
     font-family: "Optima", sans-serif;
   }
   
+input[type=text]:focus {
+  outline:none ;
+}
+
+input[type=text] {
+  display: inline-block;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 16px;
+  background-color: transparent;
+  font-family: "Optima", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+::placeholder {
+  color: rgb(113, 113, 113);
+  font-family: "Optima", sans-serif;
+  text-align: center
+}
