@@ -3,71 +3,74 @@ import { useState, useEffect } from 'react';
 //gallery
 import a0 from './gallery/a0.jpg';
 import a1 from './gallery/a1.jpg';
+import a2 from './gallery/a2.jpg';
+import a3 from './gallery/a3.jpg';
+import a4 from './gallery/a4.jpg';
+import a5 from './gallery/a5.jpg';
 //css
-import './artpiece.css'
+import './artpiece.css';
 
 
-const ArtPiece = () => {
+const ArtPiece = ({tries}) => {
 
-    const [pieceHeight, setPieceHeight] = useState(0)
-    const [opacityOnePercent, setOpacityOnePercent] = useState("100%")
-    const [opacityTwoPercent, setOpacityTwoPercent] = useState("100%")
-    const [opacityThreePercent, setOpacityThreePercent] = useState("100%")
-    const [opacityFourPercent, setOpacityFourPercent] = useState("100%")
-    const [tries, setTries] = useState(0)
+    const [pieceHeight, setPieceHeight] = useState(0);
+    const [opacityOnePercent, setOpacityOnePercent] = useState("100%");
+    const [opacityTwoPercent, setOpacityTwoPercent] = useState("100%");
+    const [opacityThreePercent, setOpacityThreePercent] = useState("100%");
+    const [opacityFourPercent, setOpacityFourPercent] = useState("100%");
+    // const [tries, setTries] = useState(0);
 
     //5 lines - get the current images height in px on image load and sets it to the pieceHeight state
     const onPieceLoad = ({ target: img }) => {
         const { height } = img;
         console.log(height);
-        setPieceHeight(height)
+        setPieceHeight(height);
     };
 
     //3 lines - the style height of the div try-one to the current art piece's height
     let gridContainerStyle = {
         height: pieceHeight
-    }
+    };
 
     //7 lines - updates height of div try-one if the image height/art piece is changed
     useEffect(() => {
         if (pieceHeight) {
             gridContainerStyle = {
                 height: "pieceHeight px"
-            }
-        }
-    }, [pieceHeight])
+            };
+        };
+    }, [pieceHeight]);
 
     //refactor these tries later
    const tryOne = {
         opacity: opacityOnePercent
-    }
+    };
 
    const tryTwo = {
         opacity: opacityTwoPercent
-    }
+    };
 
    const tryThree = {
         opacity: opacityThreePercent
-    }
+    };
 
    const tryFour = {
         opacity: opacityFourPercent
-    }
+    };
 
-    //refactor this too
-    const addTries = () => {
-        setTries(tries => tries+1)
-        console.log("clicked")
-    }
+
 
     useEffect ( () => {
 
-        if (tries===1) setOpacityOnePercent("0%")
-        if (tries===2) setOpacityTwoPercent("0%")
-        if (tries===3) setOpacityThreePercent("0%")
-        if (tries===4) setOpacityFourPercent("0%")
+        if (tries===1) setOpacityOnePercent("0%");
+        if (tries===2) setOpacityTwoPercent("0%");
+        if (tries===3) setOpacityThreePercent("0%");
+        if (tries===4) setOpacityFourPercent("0%");
+        if (tries > 4) {
+            window.location.reload();
+        };
 
-    }, [tries])
+    }, [tries]);
 
 
     return (
@@ -90,8 +93,7 @@ const ArtPiece = () => {
                 <div className="item-o" style={tryTwo}/>
                 <div className="item-p" style={tryOne}/>
             </div>
-            <img onLoad={onPieceLoad} className="art-piece" src={a1} alt="artwork" />
-            <button id="click" onClick={addTries}> click here </button>
+            <img onLoad={onPieceLoad} className="art-piece" src={a2} alt="artwork" />
         </div>
     );
 
