@@ -33,8 +33,8 @@ import a20 from './gallery/a20.jpg';
 
 function App() {
 
-  let currentArtPiece = a19
-  let artBankMatch = artBank.a19
+  let currentArtPiece = a12
+  let artBankMatch = artBank.a12
 
   const [tries, setTries] = useState(0);
   const [artistGuesses, setArtistGuesses] = useState([]);
